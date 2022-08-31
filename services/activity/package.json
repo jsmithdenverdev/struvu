@@ -1,0 +1,30 @@
+{
+  "name": "struvu",
+  "version": "1.0.0",
+  "description": "A strava clone to learn GCP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "postbuild": "cp package.json dist/package.json && cd dist && npm install --only=production",
+    "cleanbuild": "npm run build",
+    "precleanbuild": "rm -rf ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsmithdenverdev/struvu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsmithdenverdev/struvu/issues"
+  },
+  "homepage": "https://github.com/jsmithdenverdev/struvu#readme",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.2",
+    "@google/events": "^5.4.0"
+  }
+}
